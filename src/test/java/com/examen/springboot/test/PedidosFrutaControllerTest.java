@@ -19,8 +19,10 @@ public class PedidosFrutaControllerTest {
 	@Autowired
 	private PedidosFrutaController frutasController = new PedidosFrutaController(pedidosFrutaService);
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	void listarPediosFruta() {
+		@SuppressWarnings("unused")
 		ResponseEntity<PedidosFruta> respuestaServicio;
 		respuestaServicio = (ResponseEntity<PedidosFruta>) frutasController.buscarPorId((long)1);
 		Assertions.assertThat((long)1);		
